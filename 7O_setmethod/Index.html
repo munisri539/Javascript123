@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Set</title>
+    <script>
+        const numbers = [1, 2, 3, 4, 4, 5, 1, 2]; // Array with duplicate values
+
+        // Create a Set from the array
+        const uniqueNumbers = new Set(numbers);
+
+        console.log("Unique numbers:", uniqueNumbers);
+
+        // Convert the Set back to an array
+        const uniqueArray = Array.from(uniqueNumbers);
+        console.log("Array of unique numbers:", uniqueArray);
+
+    </script>
+    <script>
+        const setA = new Set([1, 2, 3]);
+        const setB = new Set([1, 2, 3, 4, 5]);
+
+        const isSubset = (set1, set2) => {
+            for (let elem of set1) {
+                if (!set2.has(elem)) {
+                    return false; // If any element in set1 is not in set2, it's not a subset
+                }
+            }
+            return true; // All elements in set1 are in set2
+        };
+
+        console.log("Is setA a subset of setB?", isSubset(setA, setB)); // Output: true
+
+
+    </script>
+</head>
+
+<body>
+    <script>
+
+        const car = {
+            make: "Toyota",
+            model: "Camry",
+            year: 2020
+        };
+
+        // Adding a new property
+        car.color = "Blue";
+        console.log("Car Color:", car.color); // Output: Blue
+
+        // Modifying an existing property
+        car.year = 2021;
+        console.log("Updated Year:", car.year); // Output: 2021
+
+    </script>
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>

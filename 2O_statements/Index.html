@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Statements</title>
+    <script>
+        let x = 5;
+        let y = "5";
+
+        console.log(x == y);  // true
+        // == checks for value equality, so JavaScript automatically converts 'y' (a string) to a number and compares it with 'x'.
+
+        console.log(x === y);  // false
+        // === checks for both value and type equality, so 'x' (number) is not equal to 'y' (string) since their types are different.
+
+    </script>
+    <script>
+        let num = 7;
+
+        if (num % 2 === 0) {
+            console.log("The number is even.");
+        } else {
+            console.log("The number is odd."); //odd
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        let age = 15;
+        let ticketPrice;
+
+        if (age < 5) {
+            ticketPrice = 0;  // Free ticket for infants and toddlers
+            console.log("You get a free ticket.");
+        } else if (age >= 5 && age <= 12) {
+            ticketPrice = 50;  // Child discount
+            console.log("Ticket price is 50/- (Child discount).");
+        } else if (age > 12 && age <= 18) {
+            ticketPrice = 80;  // Teen discount
+            console.log("Ticket price is 80/- (Teen discount).");
+        } else if (age > 18 && age <= 60) {
+            ticketPrice = 100;  // Regular price for adults
+            console.log("Ticket price is 100/- (Adult price).");
+        } else {
+            console.log("Invalid age entered.");
+        }
+
+    </script>
+    <script>
+        let dayNumber = 3; // Example input for the day of the week
+        let dayName;
+
+        switch (dayNumber) {
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 7:
+                dayName = "Sunday";
+                break;
+            default:
+                dayName = "Invalid day number";
+        }
+
+        console.log(`The day is: ${dayName}`);
+
+    </script>
+
+</body>
+
+</html>
