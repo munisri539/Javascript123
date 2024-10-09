@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Object</title>
+    <script>
+
+        // Create an Object:
+        const car = { type: "Fiat", model: "500", color: "white" };
+
+        // Corrected console.log
+        console.log(car);  // This will print the object 'car' 
+    </script>
+
+</head>
+
+<body>
+
+<p>Object</p>
+<script>
+    // Create two objects
+const car1 = { type: "Fiat", model: "500", color: "white" };
+const car2 = { type: "Toyota", model: "Corolla", color: "blue" , mode: "suv"};
+
+// Accessing properties of both objects
+console.log(car1.type);   // Output: Fiat
+console.log(car2.color);  // Output: blue
+
+// Combining two objects (using spread operator)
+const combinedCar = { ...car1, ...car2 };
+console.log(combinedCar);
+</script>
+
+</body>
+
+</html>

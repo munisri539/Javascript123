@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Strings</title>
+</head>
+
+<body>
+    <h1>String Methods</h1>
+    <script>
+        //Split
+        const word = "HELLO";
+        const letters = word.split("");
+        console.log(letters);   //O/P:-  ["H" "E" "L" "L" "0" ]
+    </script>
+    <script>
+        //Split
+        const str = "He is a good boy";
+        const x = str.split(" ");
+        console.log(x);   // ['He', 'is', 'a', 'good', 'boy']
+    </script>
+</body>
+<script>
+    //Slice
+    const str1 = "JavaScript is fun!";
+    const slicedStr = str1.slice(0, 12); // Extracts from index 0 
+    console.log(slicedStr);  // JavaScript i
+</script>
+<script>
+    //Slice
+    const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2)); // ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4)); // ["camel", "duck"]
+
+console.log(animals.slice(-2)); // ["duck", "elephant"]
+</script>
+
+</html>

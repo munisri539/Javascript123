@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MAP</title>
+</head>
+
+<body>
+    <h1>MAP</h1>
+    <script>
+        const map1 = new Map();
+
+        map1.set('a', 1);
+        map1.set('b', 2);
+        map1.set('c', 3);
+
+        console.log(map1.get('a')); //output: 1
+
+        map1.set('a', 97);
+
+        console.log(map1.get('a')); // output: 97
+
+        console.log(map1.size); //output: 3
+
+        map1.delete('b');
+
+        console.log(map1.size); // output: 2
+    </script>
+    <script>
+       
+        let x = [{ 'name': "xyz" }, { 'name': "ABC" }];
+
+        x.map((item) => {
+            if (item.name === "ABC") {
+                console.log(item);
+            }
+        });
+    </script>
+</body>
+
+</html>
