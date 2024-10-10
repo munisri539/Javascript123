@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StringMethods</title>
+</head>
+
+<body>
+    <p>string methods</p>
+    <ul>
+        <li>charAt()</li>
+        <li>charCodeAt()</li>
+        <li>subString()</li>
+        <li>trim()</li>
+    </ul>
+    <script>
+        // charAt()
+        const str = "Javascript Learning";
+        const charcount = str.charAt(8);
+        console.log(charcount)  //p
+
+        //charCodeAt: it will display the ASCII code
+        const str1 = "JavaScript is fun!";
+        const charStr = str1.charCodeAt(3);
+        console.log(charStr); //97
+
+        //slice
+        const str2 = "JavaScript is fun!";
+        const slicedStr = str1.substring(-2);  //n!
+        console.log(slicedStr);
+
+    </script>
+    <script>
+        //subString:- if i give negative number it will treats as 0
+
+        let str3 = "This is Javascript Learning";
+
+        function Substring() {
+            console.log("str.substring() = " + str3.substring(-13, 7)); // like (0, 7), so o/p is This is
+        }
+
+        Substring();
+        
+
+        //Trim() using this method to remove whitespace
+
+        const str4 = "   Hello, World!   ";
+
+        const trimmedStr = str.trim();
+
+        // Output the results
+        console.log("Original String: '" + str4 + "'");  // ' Hello, World! '
+        console.log("Trimmed String: '" + trimmedStr + "'"); //Hello, World!'
+
+    </script>
+</body>
+
+</html>
