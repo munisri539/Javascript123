@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            Trim tupes:
+            <li>trimStart()/trimLeft()</li>
+            <li>trimEnd()/trimRight()</li>
+        </ul>
+    </div>
+     <di>
+        <p>replace()</p>
+     </di>
+    <script>
+        //trim
+        let str = "   Hello World!   ";
+        let trimmedStr = str.trim();  // "Hello World!"
+        console.log(trimmedStr);
+
+        // trimStart()/trimLeft()
+        let str1 = "   Hello World!   ";
+        let trimmedStr1 = str1.trimStart();  //"Hello World! " 
+        console.log(trimmedStr1);
+
+
+        // trimEnd()/trimRight()
+        let str2 = "   Hello World!   ";
+        let trimmedStr2 = str2.trimEnd();  //" Hello World!" 
+        console.log(trimmedStr2);
+
+    </script>
+    <script>
+
+        //replace()
+        let str3 = "Hello World!";
+        let replacevalue = str3.replace('World!', 'Javascript');  //"Hello Javascript " 
+        console.log(replacevalue);
+
+        //replace() global
+        let str4 = " She is good girl and She is very active ";
+        let newSteing = str4.replace(/she/gi, 'Gracy');
+        console.log(newSteing);  // Gracy is good girl and Gracy is very active
+
+    </script>
+
+</body>
+
+</html>
