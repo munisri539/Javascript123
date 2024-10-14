@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3> String methodes practiced code </h3>
+
+        <script>
+
+// Function to manipulate and display string information
+function manipulateString(inputString) {
+    // Trim whitespace 
+    const trimmedString = inputString.trim();
+    console.log("Trimmed String: '" + trimmedString + "'");
+
+    //  length of the trimmed string
+    console.log("Length of the String: " + trimmedString.length);
+
+    // uppercase and lowercase
+    const upperCaseString = trimmedString.toUpperCase();
+    const lowerCaseString = trimmedString.toLowerCase();
+    console.log("Uppercase Version: " + upperCaseString);
+    console.log("Lowercase Version: " + lowerCaseString);
+
+    // Split the string 
+    const words = trimmedString.split(" ");
+    console.log("Words in the String: " + words);
+
+    // Display the first character of the string
+    const firstChar = trimmedString.charAt(0);
+    console.log("First Character: " + firstChar);
+
+    // Concatenate 
+    const firstWord = words[0];
+    const lastWord = words[words.length - 1];
+    const concatenatedResult = firstWord + " " + lastWord;
+    console.log("Concatenation of First and Last Words: " + concatenatedResult);
+
+    // Slice the first 5 characters of the trimmed string
+    const slicedString = trimmedString.slice(0, 5);
+    console.log("First 5 Characters (Sliced): " + slicedString);
+}
+
+// Get user input for the string
+const userInput = prompt("Enter a sentence : ");
+manipulateString(userInput);
+
+        </script>
+    </body>
+</html>
