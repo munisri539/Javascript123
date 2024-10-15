@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <ul>
+        <li>indexOf()</li>
+        <li>lastIndexOf()</li>
+        <li>startsWith()</li>
+        <li>endswith()</li>
+        <li>search()</li>
+    </ul>
+
+    <script>
+        //indexOf
+
+        let str = "Javascript learning";
+        let index = str.indexOf("learning");
+        console.log(index);  // 11
+
+        //lastIndexOf()
+        let str1 = "Javascript learning, Javascript teaching";
+        let lastindex = str1.lastIndexOf("Javascript");
+        console.log(lastindex);  // Output: 21
+
+        //startswith
+        let str2 = "Hello World";
+        let result = str2.startsWith("Hello");
+        console.log(result);  // Output: true 
+
+        //endswith
+        let str3 = "Hello World";
+        let endsw = str3.endsWith("Hello");
+        console.log(endsw);  // Output: false {because in this str is ends with world not a hello}
+
+        //search
+        let str4 = "React learning";
+        let indexsearch = str.search(/learning/);
+        console.log(indexsearch);  // Output: 11
+
+    </script>
+</body>
+
+</html>
