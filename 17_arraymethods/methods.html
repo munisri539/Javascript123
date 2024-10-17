@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>push()</li>
+            <li>pull()</li>
+            <li>shift()</li>
+            <li>unshift()</li>
+            <li>join()</li>
+        </ul>
+    </div>
+    <script>
+        //push(): Adds one or more elements to the end of an array and returns the new length of the array.
+
+        const arr = [1, 2, 3];
+        arr.push(4);
+        console.log(arr);  // Output: [1, 2, 3, 4]
+
+        //pop(): Removes the last element from an array and returns that element.
+
+        const arr1 = [1, 2, 3, 4];
+        const lastElement = arr1.pop();
+        console.log(lastElement);  // Output: 4
+        console.log(arr1);  // Output: [1, 2, 3]
+
+        //shipt() : Removes the first element from an array and returns that element.
+
+        const arr2 = [1, 2, 3];
+        const firstElement = arr.shift();
+        console.log(firstElement);  // Output: 1
+        console.log(arr2);  // Output: [2, 3]
+
+        //unShift(): Adds one or more elements to the beginning of an array and returns the new length 
+        //of the array.
+
+        const arr3 = [2, 3];
+        arr.unshift(1);
+        console.log(arr3);  // Output: [1, 2, 3]
+
+
+        //join():- Joins all elements of an array into a string.
+
+        const arr4 = ['Hello', 'World'];
+        const joined = arr4.join(' ');
+        console.log(joined);  // Output: "Hello World"
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
