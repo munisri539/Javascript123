@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <ul>
+        <li>includes()</li>
+        <li>match()</li>
+        <li>matchAll()</li>
+    </ul>
+    <script>
+        //includes()
+
+        let str = "Hello World";
+        let found = str.includes("World");
+        console.log(found);  // Output: true
+
+        const sentence = "We have to learn javascript";
+        const word = "learn";
+
+        if (sentence.includes(word)) {
+            console.log(`The word "${word}" is found.`);
+        } else {
+            console.log(`The word "${word}" is not found.`);
+        }
+
+        //match()
+        const text = "The price is 99.99, the discount is 10.5, and the tax is 5.";
+        const numberRegex = /\d+(\.\d+)?/g;
+
+        const numbers = text.match(numberRegex);
+        console.log(numbers);  // Output: ['99.99', '10.5', '5']
+
+        //matchAll()
+
+        const text1 = "Weight: 70kg, Height: 1.75m, Width: 50cm";
+        const regex = /(\d+(\.\d+)?)(kg|m|cm)/g;
+
+        const matches = text1.matchAll(regex);
+
+        for (const match of matches) {
+            console.log(`Value: ${match[1]}, Unit: ${match[3]}`);
+        }
+
+        // Output:
+        // Value: 70, Unit: kg
+        // Value: 1.75, Unit: m
+        // Value: 50, Unit: cm
+
+
+    </script>
+
+</body>
+
+</html>
