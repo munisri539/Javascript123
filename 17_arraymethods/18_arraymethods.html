@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>includes():- checks if an array contains a specific element.</li>
+            <li>findIndex():- returns the index of the first element that passes a test.</li>
+            <li>find():- returns the first element that passes a test.</li>
+            <li>forEach():- executes a function for each element in the array.</li>
+        </ul>
+        <script>
+            //includes()
+            const fruits = ['apple', 'banana', 'mango', 'orange'];
+
+            console.log(fruits.includes('banana'));  //  true
+            console.log(fruits.includes('grape'));   //  false
+
+
+            //find()
+            const people = [
+                { name: 'John', age: 25 },
+                { name: 'Jane', age: 28 },
+                { name: 'Paul', age: 18 }
+            ];
+
+            const adult = people.find(person => person.age >= 21);
+            console.log(adult);
+            // { name: 'John', age: 25 } (because John is the first person >= 21)
+
+            const teenager = people.find(person => person.age < 18);
+            console.log(teenager);  //  undefined (no person < 18)
+
+
+            //findIndex
+            const numbers = [5, 12, 8, 130, 44];
+            const index = numbers.findIndex(num => num > 10);
+            console.log(index);  // 1 (because 12 is the first number > 10)
+
+            const noIndex = numbers.findIndex(num => num > 150);
+            console.log(noIndex);  //-1 (no element found)
+
+
+            //forEach
+            const letters = ['a', 'b', 'c', 'd'];
+            letters.forEach((letter, index) => {
+                console.log(`Letter at index ${index}: ${letter}`);
+            });
+            // O/p:
+            // Letter at index 0: a
+            // Letter at index 1: b
+            // Letter at index 2: c
+            // Letter at index 3: d
+
+
+
+
+
+        </script>
+    </div>
+</body>
+
+</html>
