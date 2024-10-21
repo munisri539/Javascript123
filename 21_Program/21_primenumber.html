@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prime number</title>
+</head>
+
+<body>
+    <h2>Prime number</h2>
+    <script>
+        function isPrime(num) {
+
+            if(num <=1){
+                return false;   
+            }
+
+            for (i = 2; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    return false;
+
+                }
+
+            }
+
+            return true;
+        }
+
+        console.log(isPrime(7));  
+        console.log(isPrime(10));
+
+        const number = parseInt(prompt("Enter a number to check if it's prime:"));
+
+        // Check if the number is prime and alert the result
+        if (isPrime(number)) {
+            alert(number + " is a prime number.");
+        } else {
+            alert(number + " is not a prime number.");
+        }
+    </script>
+</body>
+
+</html>

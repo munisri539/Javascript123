@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <tit>Palindrome</tit>
+</head>
+
+<body>
+    <h1>Palindrome</h1>
+    <script>
+        function isPalindrome(str) {
+            const cleanedStr = str.toLowerCase();
+            const len = cleanedStr.length;
+            for (let i = 0; i < len / 2; i++) {
+                if (cleanedStr[i] !== cleanedStr[len - 1 - i]) {
+                    return false; 
+                }
+            }
+
+            return true; 
+        }
+
+        console.log(isPalindrome("madam"));    // true
+        console.log(isPalindrome("hello"));    // false
+
+        const input = prompt("Enter a word to check if it's a palindrome:");
+
+        if (isPalindrome(input)) {
+            alert(input + " is a palindrome.");
+        } else {
+            alert(input + " is not a palindrome.");
+        }
+
+    </script>
+</body>
+
+</html>
