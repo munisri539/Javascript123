@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>async/await</title>
+</head>
+
+<body>
+    <h1>Async and await</h1>
+    <h1>promises</h1>
+    <script>
+        function getData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Data received!");
+                }, 2000); // Simulates a 2-second async operation
+            });
+        }
+
+        // Using async/await
+        async function fetchData() {
+            try {
+                console.log("Fetching data.");
+                const result = await getData(); // Wait for the promise to resolve
+                console.log(result); // Data received!
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        }
+
+        fetchData();
+
+    </script>
+
+    <script>
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+                console.log("Fetching data...");
+
+                setTimeout(() => {
+                    const success = true; 
+
+                    if (success) {
+                        // promise with data
+                        resolve({
+                            id: 1,
+                            name: "John Doe",
+                            email: "john.doe@example.com"
+                        });
+                    } else {
+                        reject("Error: Failed to fetch data.");
+                    }
+                }, 2000); //2-second delay
+            });
+        }
+
+        // Using the fetchData function with Promises
+        fetchData()
+            .then(data => {
+                console.log("Data received:", data);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+            .finally(() => {
+                console.log("Fetch attempt completed.");
+            });
+
+    </script>
+</body>
+
+</html>
