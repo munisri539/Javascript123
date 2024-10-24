@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>odd/even</title>
+</head>
+
+<body>
+    <h1>Odd and Even</h1>
+    <script>
+        function checkOddEven(number) {
+            if (number % 2 === 0) {
+                return `${number} is even`;
+            } else {
+                return `${number} is odd`;
+            }
+        }
+        for (let i = 1; i <= 10; i++) {
+            console.log(checkOddEven(i));
+        }
+
+    </script>
+    <h1>capitalize the first letter of a string</h1>
+    <script>
+        capitalletter = function (str1) {
+            return str1.charAt(0).toUpperCase() + str1.slice(1);
+        }
+        console.log(capitalletter('js string exercises'));
+
+    </script>
+    <h1>capitalize the first letter of each word in a string</h1>
+    <script>
+        function capitalizeWords(str) {
+            return str
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+        let sentence = "javascript is a scripting language.";
+        let capitalizedSentence = capitalizeWords(sentence);
+        console.log(capitalizedSentence);
+
+    </script>
+    <h1> split a string and convert it into an array of words</h1>
+    <script>
+        str_array = function (str) {
+            return str.trim().split(" ");
+        };
+
+        console.log(str_array("Javascript Teaching"));
+
+    </script>
+    <h2>Date formate</h2>
+    <script>
+        var today = new Date();
+        var dd = today.getDate();
+
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        today = mm + '-' + dd + '-' + yyyy;
+        console.log(today);
+       
+    </script>
+</body>
+
+</html>
