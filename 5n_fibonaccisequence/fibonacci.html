@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci sequence</title>
+    </head>
+    <body>
+        <script>
+            function fibonacci(n) {
+  const sequence = [];
+
+  // Generate the Fibonacci sequence
+  for (let i = 0; i < n; i++) {
+    if (i === 0) {
+      sequence.push(0); 
+    } else if (i === 1) {
+      sequence.push(1);
+    } else {
+      sequence.push(sequence[i - 1] + sequence[i - 2]);
+    }
+  }
+
+  return sequence;
+}
+
+// Example usage:
+const terms = 10; 
+console.log(fibonacci(terms));
+
+        </script>
+    </body>
+</html>

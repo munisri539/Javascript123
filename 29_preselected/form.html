@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Form Validation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <form id="myForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <div class="error-message" id="usernameError"></div>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <div class="error-message" id="passwordError"></div>
+    
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <div class="error-message" id="confirmPasswordError"></div>
+    
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <div class="form-group">
+      <label for="qualification">Qualification:</label>
+      <select id="qualification" name="qualification" required>
+        <option value="">Select Qualification</option>
+        <option value="high-school">High School</option>
+        <option value="college">College</option>
+        <option value="university">University</option>
+      </select>
+      <div class="error-message" id="qualification-error"></div>
+    </div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+    <div class="error-message" id="addressError"></div>
+   
+    <label for="district">District:</label>
+    <select id="district" required>
+      <option value="">Select District</option>
+      <option value="krishna">Krishna</option>
+      <option value="ntrd">NTR D</option>
+      <option value="guntur">Guntur</option>
+    </select>
+    <div class="error-message" id="districtError"></div> 
+
+    <label for="city">City:</label>
+    <input type="text" id="city" readonly>
+    
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" readonly>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('myForm');
+  const username = document.getElementById('username');
+  const password = document.getElementById('password');
+  const confirmPassword = document.getElementById('confirmPassword');
+  const qualification = document.getElementById('qualification');
+  const address = document.getElementById('address');
+  const district = document.getElementById('district');
+  const cityInput = document.getElementById('city');
+  const zipInput = document.getElementById('zip');
+
+  form.addEventListener('submit', function(event) {
+    let valid = true;
+
+    // Username validation (only characters)
+    if (!/^[a-zA-Z]+$/.test(username.value)) {
+      document.getElementById('usernameError').textContent = 'Username must contain only characters';
+      valid = false;
+    } else {
+      document.getElementById('usernameError').textContent = '';
+    }
+
+    // Password validation (characters, numbers, and special characters)
+    if (!/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/.test(password.value)) {
+      document.getElementById('passwordError').textContent = 'Password must contain characters, numbers, and special characters';
+      valid = false;
+    } else {
+      document.getElementById('passwordError').textContent = '';
+    }
+
+    // Confirm password validation
+    if (password.value !== confirmPassword.value) {
+      document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+      valid = false;
+    } else {
+      document.getElementById('confirmPasswordError').textContent = '';
+    }
+
+    // Address validation (specific length)
+    if (address.value.length !== 10) {
+      document.getElementById('addressError').textContent = 'Address must be 10 characters long';
+      valid = false;
+    } else {
+      document.getElementById('addressError').textContent = '';
+    }
+
+    if (!valid) {
+      event.preventDefault();
+    }
+  });
+  district.addEventListener('change', function() {
+    const selectedDistrict = this.value;
+    if (selectedDistrict === 'krishna') {
+      cityInput.value = 'avanigadda';
+      zipInput.value = '12345';
+    } else if (selectedDistrict === 'ntrd') {
+      cityInput.value = 'Vjy';
+      zipInput.value = '67890';
+    } else if (selectedDistrict === 'guntur') {
+      cityInput.value = 'guntur';
+      zipInput.value = '90872';
+    } 
+    else {
+      cityInput.value = '';
+      zipInput.value = '';
+    }
+  });
+</script>
+</body>
+</html>

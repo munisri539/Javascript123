@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    .login-form {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .input-container {
+      margin-bottom: 10px;
+    }
+    .input-container label {
+      display: block;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    .title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="login-form">
+      <div class="title">Sign In</div>
+      <div id="status"></div>
+      <form id="loginForm">
+        <div class="input-container">
+          <label for="uname">Username</label>
+          <input type="text" id="uname" required />
+        </div>
+        <div class="input-container">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" required />
+        </div>
+        <div class="button-container">
+          <button type="submit">Login</button>
+        </div>
+        <div id="error" class="error"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const validCredentials = {
+      username: "admin",
+      password: "pa@123"
+    };
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const uname = document.getElementById("uname").value;
+      const pass = document.getElementById("pass").value;
+      const errorElement = document.getElementById("error");
+      const statusElement = document.getElementById("status");
+
+      if (uname === validCredentials.username && pass === validCredentials.password) {
+        statusElement.textContent = "User is successfully logged in";
+        statusElement.style.color = "green";
+        errorElement.textContent = "";
+      } else {
+        statusElement.textContent = "";
+        errorElement.textContent = "Invalid username or password.";
+      }
+    });
+  </script>
+</body>
+</html>

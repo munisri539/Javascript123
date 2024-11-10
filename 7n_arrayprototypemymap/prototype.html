@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array.Prototype.mymap</title>
+</head>
+
+<body>
+    <script>
+        Array.prototype.myMap = function (callback) {
+
+            const result = [];
+
+            // Iterate over the current array
+            for (let i = 0; i < this.length; i++) {
+                if (this.hasOwnProperty(i)) {
+                    // Call the callback function 
+                    result.push(callback(this[i], i, this));
+                }
+            }
+
+            // Return the new array with transformed values
+            return result;
+        };
+
+        const arr = [1, 2, 3, 4, 5, 6];
+        const doubled = arr.myMap(num => num * 2);
+        console.log(doubled);
+
+
+    </script>
+
+    <script>
+        function Animal(name) {
+            this.name = name;  // Sets property
+        }
+
+        // Method defined on the Animal prototype
+        Animal.prototype.sayHi = function () {
+            console.log(`Hi, I am ${this.name}`);  
+        };
+
+        // Create a new instance of Animal
+        const dog = new Animal('cat');
+
+        dog.sayHi();  
+
+    </script>
+</body>
+
+</html>
