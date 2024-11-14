@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) {
+
+            const cleanedStr = str.toLowerCase();
+    
+    // Reverse the string and compare it to the original
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    
+    return cleanedStr === reversedStr;
+}
+
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello"));   // Output: false
+
+    </script>
+</body>
+</html>

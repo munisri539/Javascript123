@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isSubset(arr1, arr2) {
+            return arr1.every(element => arr2.includes(element));
+        }
+
+        // Example usage:
+        const array1 = [1, 2, 3];
+        const array2 = [1, 2, 3, 4, 5];
+
+        console.log(isSubset(array1, array2)); // Output: true
+
+        const array3 = [1, 6];
+        console.log(isSubset(array3, array2)); // Output: false
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+
+        const countOccurrences = array.reduce((accumulator, currentValue) => {
+            // Check if the current element already exists in the accumulator object
+            if (accumulator[currentValue]) {
+                // If it exists, increment its count by 1
+                accumulator[currentValue]++;
+            } else {
+                // If it doesn't exist, add it to the object with a count of 1
+                accumulator[currentValue] = 1;
+            }
+            // Return the updated accumulator object for the next iteration
+            return accumulator;
+        }, {});
+
+        console.log(countOccurrences);
+
+    </script>
+</body>
+
+</html>

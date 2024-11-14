@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function memoizedFibonacci(n, cache = {}) {
+            if (n <= 1) return n;
+
+            // Check if the result is already cached
+            if (cache[n]) {
+                return cache[n];
+            }
+
+            // Compute and store the result in the cache
+            cache[n] = memoizedFibonacci(n - 1, cache) + memoizedFibonacci(n - 2, cache);
+            return cache[n];
+        }
+
+        console.log(memoizedFibonacci(40)); // Faster due to memoization
+
+    </script>
+</body>
+
+</html>

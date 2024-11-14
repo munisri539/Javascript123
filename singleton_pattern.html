@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Singleton = (function () {
+            let instance;
+
+            function createInstance() {
+                return {
+                    value: Math.random(),
+                    getValue: function () {
+                        return this.value;
+                    },
+                };
+            }
+
+            return {
+                getInstance: function () {
+                    if (!instance) {
+                        instance = createInstance();
+                    }
+                    return instance;
+                },
+            };
+        })();
+
+        // Usage
+        const instance1 = Singleton.getInstance();
+        console.log(instance1.getValue()); // Random value
+        const instance2 = Singleton.getInstance();
+        console.log(instance2.getValue()); // Same random value as instance1
+
+        console.log(instance1 === instance2); // Output: true (both are the same instance)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find largest Array</h1>
+    <!-- input=[1 5 10 25 99 6 85 0] -->
+     <script>
+        const input = [1, 5, 10, 25, 99, 6, 85, 0];
+        
+        let largnum = input[0];
+        for( let i = 1; i < input.length; i++){
+            if (input[i] > largnum) {
+                largnum = input[i];
+            }
+        }
+        console.log(largnum);
+     </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Basic functions
+        const double = x => x * 2;
+        const increment = x => x + 1;
+
+        // Composing functions manually
+        const doubleThenIncrement = x => increment(double(x));
+
+        console.log(doubleThenIncrement(5)); // Output: 11
+
+    </script>
+</body>
+
+</html>

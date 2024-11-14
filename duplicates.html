@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>remove duplicates</h1>
+    <script>
+        let array = [1,1,2,2,3,3,4,4,5,5,6,6,7,7];
+        function duplicate(arr){
+            let result = [];
+            for (let i=0;i<array.length;i++){
+                if(result.indexOf(array[i])===-1){//if it is not not present it return -1
+                    result.push(array[i])
+                }
+            }
+            return result;
+        }
+        console.log(duplicate(array));
+        </script>
+</body>
+</html>

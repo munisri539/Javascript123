@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Revers String</h1>
+    <script>
+         function Reverse(str){
+            let reverse = " ";
+            for(let i=str.length-1;i>=0;i--){
+                reverse += str[i];
+            }
+            return reverse;
+        }
+        let InputString = "javascript fundamentals";
+        console.log(Reverse(InputString));
+    </script>
+</body>
+</html>
